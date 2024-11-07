@@ -24,7 +24,6 @@ const NewTodo = (props) => {
         onChange={handleChange}
         value={newTodoTyped}
       />
-
       <button type="submit">Create to-do SUBMIT</button>
     </form>
   );

@@ -1,5 +1,7 @@
 import NewTodo from "./components/NewTodo.jsx";
+import TodoList from './components/TodoList.jsx';
 import { useState } from "react";
+
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -15,12 +17,8 @@ const App = () => {
     <>
       <h1>To-do App </h1>
       <NewTodo addTodo={addTodo} />
-      <h3>List of your To-do:</h3>
-      <ul>
-        {todos.map((todo, index) => {
-         return <li key={index}>{todo}</li>;                               // Don't forget the return.
-        })}
-      </ul>
+      <TodoList todos={todos} />
+      <h3>Things to get done:</h3>
     </>
   );
 };
